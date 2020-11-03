@@ -14,7 +14,7 @@ User.destroy_all
 users = Array.new
 
 10.times do |i|
-  user = User.create(first_name: Faker::Name.name, last_name: Faker::Name.name, email: "usereventbrite#{i}@yopmail.com", encrypted_password: Faker::Lorem.word, description: "Dummy description",  )
+  user = User.create(email: "usereventbrite#{i}@yopmail.com", encrypted_password: Faker::Lorem.word, description: "Dummy description", first_name: Faker::Name.name, last_name: Faker::Name.name)
   users << user
 end
 puts "10 Users créés"
